@@ -47,7 +47,7 @@ export default function About() {
             viewport={{ once: true }}
           >
             <div className="w-52 h-52 mx-auto bg-gray-50 rounded-full flex items-center justify-center border-1 border-primary-300">
-              <Image src="images/sahil_lk.png" alt="sahil kashetwar" />
+              <Image src="/images/demo/founder.png" alt="sahil - founder" />
             </div>
           </motion.div>
 
