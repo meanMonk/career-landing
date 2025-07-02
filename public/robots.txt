@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /api/
+Disallow: /data/
+Disallow: /_next/
+Disallow: /.next/
+
+# Allow specific API endpoints that might be useful for indexing
+Allow: /api/feedbacks
+
+# Sitemap location
+Sitemap: https://www.hire.vaayulabs.xyz/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1 
