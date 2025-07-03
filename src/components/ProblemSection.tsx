@@ -31,79 +31,78 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <div className="container-max">
-      {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-center mb-16"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          We talked to 20+ recruiters — here's what they told us:
-        </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Every conversation revealed the same pain points. Sound familiar?
-        </p>
-      </motion.div>
+    <section className="section-padding bg-white" aria-labelledby="problems-heading">
+      <div className="container-max">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12 sm:mb-16"
+        >
+          <h2 id="problems-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+            We talked to 20+ recruiters — here's what they told us:
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            Every conversation revealed the same pain points. Sound familiar?
+          </p>
+        </motion.div>
 
-      {/* Testimonials Grid */}
-      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        {problems.map((problem, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="card hover:shadow-lg transition-all duration-300"
-          >
-            <div className="flex gap-4">
+        {/* Chat-like Messages */}
+        <div className="space-y-6 sm:space-y-8 max-w-4xl mx-auto">
+          {problems.map((problem, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="chat-message"
+            >
               {/* Avatar */}
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-primary-50 rounded-full flex items-center justify-center text-xl border-2 border-primary-100">
+              <div className="chat-avatar bg-primary-100 border-2 border-primary-200">
+                <span role="img" aria-label={`${problem.name} avatar`}>
                   {problem.avatar}
-                </div>
+                </span>
               </div>
 
-              {/* Content */}
-              <div className="flex-1">
-                {/* Quote */}
-                <blockquote className="text-base text-gray-700 mb-4 leading-relaxed italic">
-                  "{problem.quote}"
-                </blockquote>
-
-                {/* Attribution */}
-                <div className="flex items-center gap-2 text-sm">
-                  <div className="font-medium text-gray-900">{problem.name}</div>
-                  <div className="text-gray-400">•</div>
-                  <div className="text-gray-500">{problem.title}</div>
+              {/* Message Content */}
+              <div className="chat-content">
+                <div className="chat-bubble">
+                  <blockquote className="chat-text">
+                    "{problem.quote}"
+                  </blockquote>
+                  <div className="chat-attribution">
+                    <span className="font-semibold text-gray-900">{problem.name}</span>
+                    <span className="mx-2 text-gray-400">•</span>
+                    <span className="text-gray-600">{problem.title}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Call to Action */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        viewport={{ once: true }}
-        className="text-center mt-16"
-      >
-        <div className="inline-flex items-center gap-2 bg-primary-800 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-          <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-          These are real quotes from real people
+            </motion.div>
+          ))}
         </div>
 
-        <p className="text-base text-gray-600 max-w-2xl mx-auto">
-          Does this sound like your current hiring experience? We're building a solution
-          that addresses exactly these problems.
-        </p>
-      </motion.div>
-    </div>
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center mt-12 sm:mt-16"
+        >
+          <div className="inline-flex items-center gap-2 bg-primary-800 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="w-2 h-2 bg-white rounded-full animate-pulse-soft" aria-hidden="true"></div>
+            <span>These are real quotes from real people</span>
+          </div>
+
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Does this sound like your current hiring experience? We're building a solution
+            that addresses exactly these problems.
+          </p>
+        </motion.div>
+      </div>
+    </section>
   )
 } 

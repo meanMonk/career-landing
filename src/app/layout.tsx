@@ -1,8 +1,18 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat, Nunito } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  display: 'swap',
+})
+
+const nunito = Nunito({
+  subsets: ['latin'],
+  variable: '--font-nunito',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Hire(Idea) – Launch a Career Page & Job Board in Minutes',
@@ -92,7 +102,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} antialiased bg-background text-text`}>
+      <body className={`${montserrat.variable} ${nunito.variable} antialiased bg-background text-text font-sans`}>
         {children}
       </body>
     </html>

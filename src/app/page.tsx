@@ -14,39 +14,25 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-      <section id="hero" className="section-padding">
-        <Hero />
-      </section>
+      <Hero />
 
       {/* Problem Recognition */}
-      <section id="problem" className="section-padding bg-gray-50">
-        <ProblemSection />
-      </section>
+      <ProblemSection />
 
       {/* Features */}
-      <section id="features" className="section-padding">
-        <Features />
-      </section>
+      <Features />
 
       {/* Demo Section */}
-      <section id="demo" className="section-padding">
-        <DemoSection />
-      </section>
+      <DemoSection />
 
       {/* Feedback Request */}
-      <section id="feedback" className="section-padding bg-white">
-        <FeedbackForm />
-      </section>
+      <FeedbackForm />
 
       {/* Early Access */}
-      <section id="early-access" className="">
-        <EarlyAccess />
-      </section>
+      <EarlyAccess />
 
       {/* About Founder */}
-      <section id="about" className="">
-        <About />
-      </section>
+      <About />
 
       <Footer />
     </main>

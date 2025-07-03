@@ -1,15 +1,15 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { useState } from 'react'
 
 const navigationItems = [
   { name: 'Problem', href: '#problem' },
   { name: 'Features', href: '#features' },
   { name: 'Demo', href: '#demo' },
-  { name: 'Feedback', href: '#feedback' },
-  { name: 'About', href: '#about' },
+  // { name: 'Feedback', href: '#feedback' },
+  // { name: 'About', href: '#about' },
 ]
 
 export default function Navigation() {
