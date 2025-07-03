@@ -78,7 +78,7 @@ export default function Hero() {
               <div className="comparison-card before text-left">
                 <div className="comparison-header">
                   <XCircle className="comparison-icon text-red-500" aria-hidden="true" />
-                  <h3 className="comparison-title text-red-800">Current Reality</h3>
+                  <p className="text-xl comparison-title text-red-800">Current Reality</p>
                 </div>
                 <ul className="comparison-list" role="list">
                   <li className="comparison-item text-red-700">
@@ -104,7 +104,7 @@ export default function Hero() {
               <div className="comparison-card after text-left">
                 <div className="comparison-header">
                   <CheckCircle className="comparison-icon text-green-500" aria-hidden="true" />
-                  <h3 className="comparison-title text-green-800">With hire(idea)</h3>
+                  <p className="text-xl comparison-title text-green-800">With hire(idea)</p>
                 </div>
                 <ul className="comparison-list" role="list">
                   <li className="comparison-item text-green-700">
@@ -146,7 +146,7 @@ export default function Hero() {
           <p className="text-sm text-gray-500 mb-6">
             Built from real conversations with 20+ recruiters and founders
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-xs sm:text-sm text-gray-400">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-xs sm:text-sm text-gray-600">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse-soft" aria-hidden="true"></div>
               <span>No upfront payment</span>
