@@ -55,11 +55,15 @@
   }
   
   .section-padding {
-    @apply py-12 sm:py-16 lg:py-20;
+    @apply py-16 sm:py-20 lg:py-24;
   }
   
   .container-max {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-5xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+
+  .container-wide {
+    @apply max-w-6xl mx-auto px-6 sm:px-8 lg:px-12;
   }
   
   .card {
@@ -137,21 +141,21 @@
     @apply mt-2 text-xs sm:text-sm text-gray-600;
   }
 
-  /* Before/After comparison styles */
+  /* Before/After comparison styles - More minimal */
   .comparison-container {
-    @apply relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 sm:p-8 border border-gray-200;
+    @apply relative bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm;
   }
 
   .comparison-card {
-    @apply bg-white rounded-xl p-4 sm:p-6 shadow-sm border transition-all duration-300;
+    @apply bg-white rounded-xl p-4 sm:p-6 border transition-all duration-300;
   }
 
   .comparison-card.before {
-    @apply border-red-200 hover:shadow-red-100;
+    @apply border-red-200 bg-red-50/30;
   }
 
   .comparison-card.after {
-    @apply border-green-200 hover:shadow-green-100;
+    @apply border-green-200 bg-green-50/30;
   }
 
   .comparison-header {
@@ -159,7 +163,7 @@
   }
 
   .comparison-icon {
-    @apply w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0;
+    @apply w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0;
   }
 
   .comparison-title {
@@ -180,11 +184,20 @@
 
   /* Spacing utilities */
   .space-section {
-    @apply space-y-12 sm:space-y-16 lg:space-y-20;
+    @apply space-y-16 sm:space-y-20 lg:space-y-24;
   }
 
   .space-content {
     @apply space-y-4 sm:space-y-6 lg:space-y-8;
+  }
+
+  /* Hero specific styles */
+  .hero-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight tracking-tight;
+  }
+
+  .hero-subtitle {
+    @apply text-lg sm:text-xl lg:text-2xl text-gray-600 leading-relaxed font-normal;
   }
 
   /* Mobile optimizations */
@@ -198,7 +211,7 @@
     }
     
     .container-max {
-      @apply px-3;
+      @apply px-4;
     }
   }
 }

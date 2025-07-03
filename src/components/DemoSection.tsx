@@ -63,9 +63,9 @@ export default function DemoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-16 sm:mb-20"
         >
-          <h2 id="demo-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <h2 id="demo-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8">
             Quick Demo of Application
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -104,18 +104,18 @@ export default function DemoSection() {
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-primary-800 p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 border border-gray-200"
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-primary-800 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 border border-gray-200 focus:ring-2 focus:ring-primary-800 focus:ring-offset-2 focus:outline-none"
               aria-label="Previous slide"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
 
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-primary-800 p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 border border-gray-200"
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-primary-800 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 border border-gray-200 focus:ring-2 focus:ring-primary-800 focus:ring-offset-2 focus:outline-none"
               aria-label="Next slide"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
 
@@ -125,7 +125,7 @@ export default function DemoSection() {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentSlide
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-200 focus:ring-2 focus:ring-primary-800 focus:ring-offset-2 focus:outline-none ${index === currentSlide
                   ? 'bg-primary-800 scale-110' 
                     : 'bg-gray-300 hover:bg-gray-400'
                   }`}
@@ -140,12 +140,12 @@ export default function DemoSection() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="text-center mt-8"
+            className="text-center mt-8 sm:mt-10"
           >
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
               {demoScreens[currentSlide].title}
             </h3>
-            <p className="text-base sm:text-lg text-gray-600 max-w-lg mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               {demoScreens[currentSlide].description}
             </p>
           </motion.div>

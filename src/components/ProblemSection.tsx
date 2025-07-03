@@ -31,7 +31,7 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <section id="problem" className="section-padding bg-white" aria-labelledby="problems-heading">
+    <section id="problem" className="section-padding bg-gray-50" aria-labelledby="problems-heading">
       <div className="container-max">
         {/* Header */}
         <motion.div
@@ -39,9 +39,9 @@ export default function ProblemSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-16 sm:mb-20"
         >
-          <h2 id="problems-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <h2 id="problems-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8">
             We talked to 20+ recruiters — here's what they told us:
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -50,7 +50,7 @@ export default function ProblemSection() {
         </motion.div>
 
         {/* Chat-like Messages */}
-        <div className="space-y-6 sm:space-y-8 max-w-4xl mx-auto">
+        <div className="space-y-8 sm:space-y-10 max-w-3xl mx-auto">
           {problems.map((problem, index) => (
             <motion.div
               key={index}
@@ -61,7 +61,7 @@ export default function ProblemSection() {
               className="chat-message"
             >
               {/* Avatar */}
-              <div className="chat-avatar bg-primary-100 border-2 border-primary-200">
+              <div className="chat-avatar bg-white border-2 border-gray-200 shadow-sm">
                 <span role="img" aria-label={`${problem.name} avatar`}>
                   {problem.avatar}
                 </span>
@@ -69,14 +69,12 @@ export default function ProblemSection() {
 
               {/* Message Content */}
               <div className="chat-content">
-                <div className="chat-bubble">
-                  <blockquote className="chat-text">
+                <div className="chat-bubble bg-white border border-gray-200 shadow-sm">
+                  <blockquote className="chat-text text-gray-900">
                     "{problem.quote}"
                   </blockquote>
                   <div className="chat-attribution">
-                    {/* <span className="font-semibold text-gray-900">{problem.name}</span> */}
                     <span className="text-gray-600">{problem.title}</span>
-                    <span className="mx-2 text-gray-400">•</span>
                   </div>
                 </div>
               </div>
@@ -90,9 +88,9 @@ export default function ProblemSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="text-center mt-12 sm:mt-16"
+          className="text-center mt-16 sm:mt-20"
         >
-          <div className="inline-flex items-center gap-2 bg-primary-800 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 bg-primary-800 text-white px-4 py-2 rounded-full text-sm font-medium mb-8">
             <div className="w-2 h-2 bg-white rounded-full animate-pulse-soft" aria-hidden="true"></div>
             <span>These are real quotes from real people</span>
           </div>

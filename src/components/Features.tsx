@@ -97,9 +97,9 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-16 sm:mb-20"
         >
-          <h2 id="features-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <h2 id="features-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8">
             Here's What We're Building
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -115,22 +115,22 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`grid lg:grid-cols-2 gap-8 sm:gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+              className={`grid lg:grid-cols-2 gap-12 sm:gap-16 items-center max-w-5xl mx-auto ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
                 }`}
             >
               {/* Content */}
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                 <div className="space-content">
-                  <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                    <div className="bg-primary-800 text-white p-2 sm:p-3 rounded-lg" aria-hidden="true">
+                  <div className="flex items-center gap-3 mb-6 sm:mb-8">
+                    <div className="bg-primary-800 text-white p-3 sm:p-4 rounded-xl shadow-sm" aria-hidden="true">
                       {feature.icon}
                     </div>
-                    <span className="text-xs sm:text-sm font-medium text-primary-800 bg-primary-50 px-3 py-1 rounded-full">
+                    <span className="text-xs sm:text-sm font-medium text-primary-800 bg-primary-50 px-3 py-1 rounded-full border border-primary-200">
                       Feature {index + 1}
                     </span>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
                     {feature.title}
                   </h3>
 
@@ -140,9 +140,9 @@ export default function Features() {
                 </div>
               </div>
 
-              {/* Cropped Image Preview */}
+              {/* Image Preview */}
               <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
-                <div className="feature-image-container">
+                <div className="feature-image-container bg-white shadow-lg border border-gray-200">
                   <Image
                     src={feature.image}
                     alt={`${feature.title} feature preview`}
@@ -172,24 +172,26 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mt-16 sm:mt-20 p-6 sm:p-8 bg-gray-50 rounded-2xl"
+          className="text-center mt-20 sm:mt-24 max-w-3xl mx-auto"
         >
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-            Does this solve your hiring problems?
-          </h3>
-          <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
-            We're still building this and want to make sure we're on the right track.
-          </p>
-          <button
-            onClick={() => document.getElementById('feedback')?.scrollIntoView({ behavior: 'smooth' })}
-            className="btn-primary"
-            aria-describedby="feedback-cta-description"
-          >
-            Share Your Thoughts
-          </button>
-          <span id="feedback-cta-description" className="sr-only">
-            Jump to feedback form to share your thoughts on these features
-          </span>
+          <div className="p-8 sm:p-12 bg-gray-50 rounded-2xl border border-gray-200">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              Does this solve your hiring problems?
+            </h3>
+            <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-10 max-w-2xl mx-auto">
+              We're still building this and want to make sure we're on the right track.
+            </p>
+            <button
+              onClick={() => document.getElementById('feedback')?.scrollIntoView({ behavior: 'smooth' })}
+              className="btn-primary"
+              aria-describedby="feedback-cta-description"
+            >
+              Share Your Thoughts
+            </button>
+            <span id="feedback-cta-description" className="sr-only">
+              Jump to feedback form to share your thoughts on these features
+            </span>
+          </div>
         </motion.div>
       </div>
     </section>

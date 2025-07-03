@@ -99,9 +99,9 @@ export default function FeedbackForm() {
   }
 
   return (
-    <section id="feedback" className="section-padding bg-gray-50" aria-labelledby="feedback-heading">
+    <section id="feedback" className="section-padding bg-white" aria-labelledby="feedback-heading">
       <div className="container-max">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start max-w-6xl mx-auto">
           {/* Left Column - Content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -110,18 +110,18 @@ export default function FeedbackForm() {
             viewport={{ once: true }}
             className="space-content"
           >
-            <h2 id="feedback-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+            <h2 id="feedback-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8">
               Help Us Build This Right
             </h2>
 
-            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+            <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-10">
               We're not building in a vacuum. Every feature, every decision is based on real feedback
               from people like you who are dealing with hiring challenges every day.
             </p>
 
-            <div className="space-y-6 sm:space-y-8">
+            <div className="space-y-8 sm:space-y-10">
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary-800 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm sm:text-base font-bold">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-800 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm sm:text-base font-bold shadow-sm">
                   1
                 </div>
                 <div>
@@ -131,7 +131,7 @@ export default function FeedbackForm() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary-800 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm sm:text-base font-bold">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-800 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm sm:text-base font-bold shadow-sm">
                   2
                 </div>
                 <div>
@@ -141,7 +141,7 @@ export default function FeedbackForm() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary-800 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm sm:text-base font-bold">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-800 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm sm:text-base font-bold shadow-sm">
                   3
                 </div>
                 <div>
@@ -151,7 +151,7 @@ export default function FeedbackForm() {
               </div>
             </div>
 
-            <div className="p-4 sm:p-6 bg-blue-50 rounded-lg border border-blue-200 mt-6 sm:mt-8">
+            <div className="p-6 sm:p-8 bg-blue-50 rounded-xl border border-blue-200 mt-8 sm:mt-10">
               <div className="flex items-start gap-3">
                 <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 mt-0.5 flex-shrink-0" aria-hidden="true" />
                 <div>
@@ -171,8 +171,8 @@ export default function FeedbackForm() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit} className="card space-y-6" noValidate>
-              <div className="mb-6">
+            <form onSubmit={handleSubmit} className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6" noValidate>
+              <div className="mb-8">
                 <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">Your Feedback</h3>
                 <p className="text-sm text-gray-600">Help us understand your hiring needs better</p>
               </div>
