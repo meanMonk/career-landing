@@ -74,9 +74,9 @@ export default function ProblemSection() {
                     "{problem.quote}"
                   </blockquote>
                   <div className="chat-attribution">
-                    <span className="font-semibold text-gray-900">{problem.name}</span>
-                    <span className="mx-2 text-gray-400">•</span>
+                    {/* <span className="font-semibold text-gray-900">{problem.name}</span> */}
                     <span className="text-gray-600">{problem.title}</span>
+                    <span className="mx-2 text-gray-400">•</span>
                   </div>
                 </div>
               </div>
