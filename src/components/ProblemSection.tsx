@@ -31,7 +31,7 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <section className="section-padding bg-white" aria-labelledby="problems-heading">
+    <section id="problem" className="section-padding bg-white" aria-labelledby="problems-heading">
       <div className="container-max">
         {/* Header */}
         <motion.div

@@ -21,7 +21,7 @@ const credentials = [
 
 export default function About() {
   return (
-    <div className="bg-gray-50 section-padding">
+    <section className="bg-gray-50 section-padding" aria-labelledby="about-heading">
       <div className="container-max">
         <div className="max-w-4xl mx-auto text-center space-content">
           {/* Header */}
@@ -31,10 +31,10 @@ export default function About() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 id="about-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               About This Project
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Building this because hiring shouldn't be this hard
             </p>
           </motion.div>
@@ -46,8 +46,14 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="w-52 h-52 mx-auto bg-gray-50 rounded-full flex items-center justify-center border-1 border-primary-300">
-              <Image src="/images/demo/founder.png" alt="sahil - founder" width="200" height={200} />
+            <div className="w-40 h-40 sm:w-52 sm:h-52 mx-auto bg-gray-50 rounded-full flex items-center justify-center border-2 border-primary-300">
+              <Image
+                src="/images/demo/founder.png"
+                alt="Sahil - Founder of hire(idea)"
+                width={200}
+                height={200}
+                className="rounded-full"
+              />
             </div>
           </motion.div>
 
@@ -58,7 +64,7 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <p className="text-base text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
               Hi, I'm Sahil. After seeing dozens of startups struggle with hiring tools that cost more than their rent, I decided to build something simpler — designed for speed, not stress.
             </p>
           </motion.div>
@@ -70,13 +76,13 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 md:gap-12">
               {credentials.map((credential, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary-800 text-white flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-primary-800 text-white flex items-center justify-center" aria-hidden="true">
                     {credential.icon}
                   </div>
-                  <span className="text-gray-700 font-medium text-sm">{credential.title}</span>
+                  <span className="text-gray-700 font-medium text-sm sm:text-base">{credential.title}</span>
                 </div>
               ))}
             </div>
@@ -94,24 +100,26 @@ export default function About() {
                 href="https://x.com/sahil_kashetwar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-ghost flex items-center gap-2 text-sm"
+                className="btn-ghost flex items-center gap-2 text-sm sm:text-base"
+                aria-label="Follow Sahil on Twitter (opens in new tab)"
               >
-                <Twitter className="w-4 h-4" />
-                Follow on Twitter
+                <Twitter className="w-4 h-4" aria-hidden="true" />
+                <span>Follow on Twitter</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/sahil24"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-ghost flex items-center gap-2 text-sm"
+                className="btn-ghost flex items-center gap-2 text-sm sm:text-base"
+                aria-label="Connect with Sahil on LinkedIn (opens in new tab)"
               >
-                <Linkedin className="w-4 h-4" />
-                Connect on LinkedIn
+                <Linkedin className="w-4 h-4" aria-hidden="true" />
+                <span>Connect on LinkedIn</span>
               </a>
             </div>
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   )
 } 

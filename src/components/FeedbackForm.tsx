@@ -99,7 +99,7 @@ export default function FeedbackForm() {
   }
 
   return (
-    <section className="section-padding bg-gray-50" aria-labelledby="feedback-heading">
+    <section id="feedback" className="section-padding bg-gray-50" aria-labelledby="feedback-heading">
       <div className="container-max">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Column - Content */}

@@ -55,20 +55,20 @@ export default function DemoSection() {
   }
 
   return (
-    <div className="bg-gray-50">
-      <div className="container-max py-2">
+    <section id="demo" className="bg-gray-50 section-padding" aria-labelledby="demo-heading">
+      <div className="container-max">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center my-8 "
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 id="demo-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
             Quick Demo of Application
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Here's a sneak peek at what we're building for you
           </p>
         </motion.div>
@@ -142,15 +142,15 @@ export default function DemoSection() {
             transition={{ duration: 0.3 }}
             className="text-center mt-8"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
               {demoScreens[currentSlide].title}
             </h3>
-            <p className="text-base text-gray-600 max-w-lg mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-lg mx-auto">
               {demoScreens[currentSlide].description}
             </p>
           </motion.div>
         </motion.div>
       </div>
-    </div>
+    </section>
   )
 } 

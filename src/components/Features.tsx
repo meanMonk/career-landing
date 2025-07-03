@@ -90,7 +90,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="section-padding bg-white" aria-labelledby="features-heading">
+    <section id="features" className="section-padding bg-white" aria-labelledby="features-heading">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
